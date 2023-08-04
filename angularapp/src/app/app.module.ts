@@ -1,18 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FoodListComponent } from './food-list/food-list.component';
-import {FoodSearchPipe} from './food-search.pipe';
-import{FormsModule} from '@angular/forms'
+import { FilterPipe } from './filter.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    FoodListComponent,
-    FoodSearchPipe
+    FilterPipe
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],
